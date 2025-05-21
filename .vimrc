@@ -12,9 +12,6 @@ set path+=**
 set path+=~/.config/nvim
 set wildignore+=*/build/**,*/out/**,*/.git/**,*/node_modules/**
 
-" commenting
-set commentstring=//\ %s
-
 " indentation
 set tabstop=4
 set shiftwidth=4
@@ -51,6 +48,9 @@ call plug#end()
 if (has("termguicolors"))
  set termguicolors
 endif
+
+" run commands for certain file type
+filetype plugin on
 
 " color scheme
 syntax enable
