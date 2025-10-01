@@ -3,6 +3,7 @@ syntax keyword mylangKeyword void any int bool string char float
 syntax keyword mylangKeyword struct import private public internal external as
 syntax keyword mylangKeyword if else while for switch
 syntax keyword mylangKeyword return break continue sizeof
+syntax keyword mylangKeyword input
 
 " Booleans
 syntax keyword mylangBoolean true false
@@ -36,7 +37,7 @@ syntax match mylangSection /\v\@[A-Za-z_][A-Za-z0-9_]*/ containedin=ALLBUT,mylan
 
 " Highlight groups
 highlight link mylangKeyword       @keyword
-highlight link mylangSection       @keyword
+highlight link mylangSection       @function
 highlight link mylangBoolean       @boolean
 highlight link mylangType          @type.builtin
 highlight link mylangPascalType    @type
