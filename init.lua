@@ -63,7 +63,7 @@ require("colorizer").setup{
 }
 require("mason").setup()
 
-require'lspconfig'.jdtls.setup{
+vim.lsp.config("jdtls", {
 	settings = {
 		java = {
 			project = {
@@ -71,7 +71,7 @@ require'lspconfig'.jdtls.setup{
 			},
 		},
 	},
-}
+})
 vim.lsp.enable("clangd")
 vim.lsp.enable("jdtls")
 vim.lsp.enable("vtsls")
